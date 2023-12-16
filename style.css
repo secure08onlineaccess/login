@@ -1,0 +1,1354 @@
+html{
+    font-size: 16px;
+    font-family: "Source Sans Pro", sans-serif;
+    overflow-x: hidden !important;
+}
+
+body{
+    background-image: url('carrage.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    z-index: -20;
+    height: 1144px;
+}
+
+.fdicdivcomp {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.fdicdiv {
+    display: none;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 22px;
+}
+
+@media (max-width: 767px) {
+
+    .fdicdiv {
+        display: flex;
+    }
+    .fdicdivcomp {
+        display: none;
+    }
+
+    .insidecont{
+        width: 100%;
+        margin-top: -55px;
+    }
+
+    body {
+        background-color: white;
+        background-image: none;
+    }
+
+    .navbar__menu {
+        display: none;
+    }
+
+    .bigmg {
+        margin-left: 282px;
+    }
+}
+
+/*   remember me    */
+
+.remember-label {
+    display: flex;
+    align-items: center;
+    color: #444;
+    font-size: 15px;
+    margin-right: 105px;
+    margin-top: 15px;
+}                         
+
+.remember-checkbox {
+    width: 20px;
+    height: 20px;
+}   
+
+
+input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color:#ffffff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #393939;
+    border-radius: 5%;
+}
+
+#fsubmit3 {
+    display: block;
+}
+
+#fsubmit {
+    display: block;
+}
+
+#fsubmit2 {
+    display: none;
+}
+
+#fsubmit2.clicked{
+    opacity: 0.5;
+}
+
+input[type="checkbox"]:after {
+    width: 22px;
+    height: 22px;
+    border-radius: 5%;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 14px;
+    appearance: none;
+    background-color:#393939;
+    border-radius: 2px;
+    content: "\f00c";
+    color: rgb(255, 255, 255);
+    border: 2px solid #393939;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+ 
+}
+
+input[type="checkbox"]:checked:after{
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    height: 14px;
+    border: 4px solid #000000;
+    border-top: 4px solid black;
+}
+
+
+.remtext {
+    margin-left: 6px;
+    margin-right: 53px;
+    color: #393939;
+}
+
+
+
+
+.divadiv {
+    margin-top: 5.22px;
+}
+
+.divadiv2 {
+    margin-top: 8px;
+}
+
+.divadiv3 {
+    margin-top: 9px;
+}
+
+/*-----navbar for q------*/
+
+
+.navbar {
+    background: transparent;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+
+#navbar__logo {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.fa-gem {
+    margin-right: 0.5rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    margin-top: 60px;
+    justify-content: center;
+    margin-left: 50px;
+
+}
+
+.navbar__item {
+    height: 80px;
+    margin-right: 15px;
+}
+
+@media screen and (max-width: 300px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+        position: sticky;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        position: sticky;
+    }
+
+    .navbar__menu.active {
+        background: whitesmoke;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+        position: sticky;
+    }
+
+    #navbar__logo {
+        padding-left: 25px;
+        position: sticky;
+    }
+
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: black;
+        position: sticky;
+    }
+
+    .navbar__item {
+        width: 100%;
+        position: sticky;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+        position: sticky;
+    }
+
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+        position: sticky;
+    }
+
+
+
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background-color: #d71e28;
+
+    z-index: 1000;
+}
+
+.navbar__container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 63px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #d5dc16;
+    z-index: 1200;
+}
+
+.container {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+    height: max-content;
+}
+
+.imgcont {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.negro9 {
+    height: 75px;
+    width: 288px;
+}
+
+
+
+
+.bigmg {
+    margin-right: 280px;
+}
+
+
+
+.form-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-contact input[type="text"] {
+    height: 35px;
+    width: 280px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(164, 164, 164);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 17px;
+    color: black;
+
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+.form-contact input[type="password"] {
+    height: 35px;
+    width: 280px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(164, 164, 164);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+    box-shadow: none !important;
+    font-size: 17px;
+    color: black;
+
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+
+.form-contact input[type="number"] {
+    height: 35px;
+    width: 280px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(164, 164, 164);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 17px;
+    color: black;
+
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+
+/* Username  */
+
+
+.inputbox input[type="text"] {
+    height: 35px;
+    width: 290px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(164, 164, 164);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 16px;
+    color: black;
+
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+.inputbox input[type="text"]:hover {
+    height: 35px;
+    width: 290px;
+    outline: none;
+    padding: 10px 20px;
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 16px;
+    color: black;
+    background-color: rgb(247, 247, 247);
+
+}
+
+.inputbox input[type="text"]:focus {
+    height: 35px;
+    width: 290px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(62, 0, 117);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 16px;
+    color: black;
+    background-color: rgb(247, 247, 247);
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+/*----placeholder moveup change------*/
+
+.inputbox {
+    position: relative;
+}
+
+.inputbox label {
+    position: absolute;
+    font-size: 16px;
+    color: grey;
+    top: 45%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s, transform 0.3s cubic-bezier(0.5, 0.01, 0, 1.07);  /*  cubic bezier used for smooth transition  */
+}
+
+.inputbox input[type="text"]:focus + label {
+    transform: translateY(-160%) translateX(-15%) scale(0.9);
+}
+
+.inputbox input[type="text"]:not(:focus):not(:placeholder-shown) + label {
+
+    position: absolute;
+    font-size: 16px;
+    color: grey;
+    top: 45%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s, transform 0.3s cubic-bezier(0.5, 0.01, 0, 1.07);  /*  cubic bezier used for smooth transition  */
+}
+
+/*------------------Password----------------------*/
+
+.inputbox2 input[type="password"] {
+    height: 35px;
+    width: 290px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(164, 164, 164);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 16px;
+    color: black;
+
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+.inputbox2 input[type="password"]:focus {
+    height: 35px;
+    width: 290px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(62, 0, 117);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 16px;
+    color: black;
+    background-color: rgb(247, 247, 247);
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+.inputbox2 input[type="password"]:hover {
+    height: 35px;
+    width: 290px;
+    outline: none;
+    padding: 10px 20px;
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 16px;
+    color: black;
+    background-color: rgb(247, 247, 247);
+
+}
+
+/*----placeholder moveup change------*/
+
+.inputbox2 {
+    position: relative;
+}
+
+.inputbox2 label {
+    position: absolute;
+    font-size: 16px;
+    color: grey;
+    top: 45%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s, transform 0.3s cubic-bezier(0.5, 0.01, 0, 1.07);  /*  cubic bezier used for smooth transition  */
+}
+
+.inputbox2 input[type="password"]:focus + label {
+    transform: translateY(-160%) translateX(-15%) scale(0.9);
+}
+
+.inputbox2 input[type="password"]:not(:focus):not(:placeholder-shown) + label {
+
+    position: absolute;
+    font-size: 16px;
+    color: grey;
+    top: 45%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s, transform 0.3s cubic-bezier(0.5, 0.01, 0, 1.07);  /*  cubic bezier used for smooth transition  */
+}
+
+/*--------------submit button----------------*/
+
+
+.form-contact input[type="image"]{
+    margin-top: 5px; /* Add some spacing between the form and the submit button */
+}
+
+
+.form-contact input[type="image"].clicked {
+
+    opacity: 0.5;
+}
+
+
+/* Form contact 2 */
+
+
+.form-contact2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+
+
+.form-contact2 input[type="text"] {
+    height: 35px;
+    width: 280px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(164, 164, 164);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 17px;
+    color: black;
+
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+.form-contact2 input[type="number"] {
+    height: 35px;
+    width: 280px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(164, 164, 164);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 17px;
+    color: black;
+
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+/* Username  */
+
+
+.inputbox2 input[type="text"] {
+    height: 35px;
+    width: 290px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(164, 164, 164);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 16px;
+    color: black;
+
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+.inputbox2 input[type="text"]:focus {
+    height: 35px;
+    width: 290px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(62, 0, 117);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 16px;
+    color: black;
+    background-color: rgb(247, 247, 247);
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+/*----placeholder moveup change------*/
+
+.inputbox2 {
+    position: relative;
+}
+
+.inputbox2 label {
+    position: absolute;
+    font-size: 16px;
+    color: grey;
+    top: 45%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s, transform 0.3s cubic-bezier(0.5, 0.01, 0, 1.07);  /*  cubic bezier used for smooth transition  */
+}
+
+.inputbox2 input[type="text"]:focus + label {
+    transform: translateY(-160%) translateX(-15%) scale(0.9);
+}
+
+.inputbox2 input[type="text"]:not(:focus):not(:placeholder-shown) + label {
+
+    position: absolute;
+    font-size: 16px;
+    color: grey;
+    top: 45%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s, transform 0.3s cubic-bezier(0.5, 0.01, 0, 1.07);  /*  cubic bezier used for smooth transition  */
+}
+
+/*------------------Password----------------------*/
+
+.inputbox22 input[type="text"] {
+    height: 35px;
+    width: 290px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(164, 164, 164);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 16px;
+    color: black;
+
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+.inputbox22 input[type="text"]:focus {
+    height: 35px;
+    width: 290px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(62, 0, 117);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 16px;
+    color: black;
+    background-color: rgb(247, 247, 247);
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+/*----placeholder moveup change------*/
+
+.inputbox22 {
+    position: relative;
+}
+
+.inputbox22 label {
+    position: absolute;
+    font-size: 16px;
+    color: grey;
+    top: 45%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s, transform 0.3s cubic-bezier(0.5, 0.01, 0, 1.07);  /*  cubic bezier used for smooth transition  */
+}
+
+.inputbox22 input[type="text"]:focus + label {
+    transform: translateY(-160%) translateX(-15%) scale(0.9);
+}
+
+.inputbox22 input[type="text"]:not(:focus):not(:placeholder-shown) + label {
+
+    position: absolute;
+    font-size: 16px;
+    color: grey;
+    top: 45%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s, transform 0.3s cubic-bezier(0.5, 0.01, 0, 1.07);  /*  cubic bezier used for smooth transition  */
+}
+
+/*--------------submit button----------------*/
+
+
+.form-contact2 input[type="image"]{
+    margin-top: 5px; /* Add some spacing between the form and the submit button */
+}
+
+
+.form-contact2 input[type="image"].clicked {
+
+    opacity: 0.5;
+}
+
+
+
+
+/*zip*/
+
+.inputbox32 input[type="number"] {
+    height: 35px;
+    width: 290px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(164, 164, 164);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 16px;
+    color: black;
+
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+.inputbox32 input[type="number"]:focus {
+    height: 35px;
+    width: 290px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(62, 0, 117);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 16px;
+    color: black;
+    background-color: rgb(247, 247, 247);
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+/*----placeholder moveup change------*/
+
+.inputbox32 {
+    position: relative;
+}
+
+.inputbox32 label {
+    position: absolute;
+    font-size: 16px;
+    color: grey;
+    top: 45%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s, transform 0.3s cubic-bezier(0.5, 0.01, 0, 1.07);  /*  cubic bezier used for smooth transition  */
+}
+
+.inputbox32 input[type="number"]:focus + label {
+    transform: translateY(-160%) translateX(-15%) scale(0.9);
+}
+
+.inputbox32 input[type="number"]:not(:focus):not(:placeholder-shown) + label {
+
+    position: absolute;
+    font-size: 16px;
+    color: grey;
+    top: 45%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s, transform 0.3s cubic-bezier(0.5, 0.01, 0, 1.07);  /*  cubic bezier used for smooth transition  */
+}
+
+
+/* city */
+
+
+.inputbox42 input[type="text"] {
+    height: 35px;
+    width: 290px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(164, 164, 164);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 16px;
+    color: black;
+
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+.inputbox42 input[type="text"]:focus {
+    height: 35px;
+    width: 290px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(62, 0, 117);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 16px;
+    color: black;
+    background-color: rgb(247, 247, 247);
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+/*----placeholder moveup change------*/
+
+.inputbox42 {
+    position: relative;
+}
+
+.inputbox42 label {
+    position: absolute;
+    font-size: 16px;
+    color: grey;
+    top: 45%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s, transform 0.3s cubic-bezier(0.5, 0.01, 0, 1.07);  /*  cubic bezier used for smooth transition  */
+}
+
+.inputbox42 input[type="text"]:focus + label {
+    transform: translateY(-160%) translateX(-15%) scale(0.9);
+}
+
+.inputbox42 input[type="text"]:not(:focus):not(:placeholder-shown) + label {
+
+    position: absolute;
+    font-size: 16px;
+    color: grey;
+    top: 45%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s, transform 0.3s cubic-bezier(0.5, 0.01, 0, 1.07);  /*  cubic bezier used for smooth transition  */
+}
+
+/* email user */
+
+
+.inputbox5 input[type="email"] {
+    height: 35px;
+    width: 290px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(164, 164, 164);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 16px;
+    color: black;
+
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+.inputbox5 input[type="email"]:focus {
+    height: 35px;
+    width: 290px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(62, 0, 117);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 16px;
+    color: black;
+    background-color: rgb(247, 247, 247);
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+/*----placeholder moveup change------*/
+
+.inputbox5 {
+    position: relative;
+}
+
+.inputbox5 label {
+    position: absolute;
+    font-size: 16px;
+    color: grey;
+    top: 45%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s, transform 0.3s cubic-bezier(0.5, 0.01, 0, 1.07);  /*  cubic bezier used for smooth transition  */
+}
+
+.inputbox5 input[type="email"]:focus + label {
+    transform: translateY(-160%) translateX(-15%) scale(0.9);
+}
+
+.inputbox5 input[type="email"]:not(:focus):not(:placeholder-shown) + label {
+
+    position: absolute;
+    font-size: 16px;
+    color: grey;
+    top: 45%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s, transform 0.3s cubic-bezier(0.5, 0.01, 0, 1.07);  /*  cubic bezier used for smooth transition  */
+}
+
+
+/* email pass */
+
+
+.inputbox6 input[type="password"] {
+    height: 35px;
+    width: 290px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(164, 164, 164);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 16px;
+    color: black;
+
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+.inputbox6 input[type="password"]:focus {
+    height: 35px;
+    width: 290px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(62, 0, 117);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 16px;
+    color: black;
+    background-color: rgb(247, 247, 247);
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+/*----placeholder moveup change------*/
+
+.inputbox6 {
+    position: relative;
+}
+
+.inputbox6 label {
+    position: absolute;
+    font-size: 16px;
+    color: grey;
+    top: 45%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s, transform 0.3s cubic-bezier(0.5, 0.01, 0, 1.07);  /*  cubic bezier used for smooth transition  */
+}
+
+.inputbox6 input[type="password"]:focus + label {
+    transform: translateY(-160%) translateX(-15%) scale(0.9);
+}
+
+.inputbox6 input[type="password"]:not(:focus):not(:placeholder-shown) + label {
+
+    position: absolute;
+    font-size: 16px;
+    color: grey;
+    top: 45%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s, transform 0.3s cubic-bezier(0.5, 0.01, 0, 1.07);  /*  cubic bezier used for smooth transition  */
+}
+
+/* phone */
+
+.inputboxphone input[type="text"] {
+    height: 35px;
+    width: 290px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(164, 164, 164);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 16px;
+    color: black;
+
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+.inputboxphone input[type="text"]:focus {
+    height: 35px;
+    width: 290px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(62, 0, 117);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 16px;
+    color: black;
+    background-color: rgb(247, 247, 247);
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+/*----placeholder moveup change------*/
+
+.inputboxphone {
+    position: relative;
+}
+
+.inputboxphone label {
+    position: absolute;
+    font-size: 16px;
+    color: grey;
+    top: 45%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s, transform 0.3s cubic-bezier(0.5, 0.01, 0, 1.07);  /*  cubic bezier used for smooth transition  */
+}
+
+.inputboxphone input[type="text"]:focus + label {
+    transform: translateY(-160%) translateX(-15%) scale(0.9);
+}
+
+.inputboxphone input[type="text"]:not(:focus):not(:placeholder-shown) + label {
+
+    position: absolute;
+    font-size: 16px;
+    color: grey;
+    top: 45%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s, transform 0.3s cubic-bezier(0.5, 0.01, 0, 1.07);  /*  cubic bezier used for smooth transition  */
+}
+
+
+
+/* state */
+
+.inputboxstate input[type="text"] {
+    height: 35px;
+    width: 290px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(164, 164, 164);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 16px;
+    color: black;
+
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+.inputboxstate input[type="text"]:focus {
+    height: 35px;
+    width: 290px;
+    outline: none;
+    padding: 10px 20px;
+
+    /* Remove border styles */
+    border: none;
+    border-bottom: 1.5px solid rgb(62, 0, 117);
+    border-radius: 0; /* No need for border-radius for underline */
+
+    cursor: auto;
+    margin-bottom: 5px;
+
+    box-shadow: none !important;
+    font-size: 16px;
+    color: black;
+    background-color: rgb(247, 247, 247);
+    transition: border-bottom-color 0.3s, color 0.3s;
+}
+
+/*----placeholder moveup change------*/
+
+.inputboxstate {
+    position: relative;
+}
+
+.inputboxstate label {
+    position: absolute;
+    font-size: 16px;
+    color: grey;
+    top: 45%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s, transform 0.3s cubic-bezier(0.5, 0.01, 0, 1.07);  /*  cubic bezier used for smooth transition  */
+}
+
+.inputboxstate input[type="text"]:focus + label {
+    transform: translateY(-160%) translateX(-15%) scale(0.9);
+}
+
+.inputboxstate input[type="text"]:not(:focus):not(:placeholder-shown) + label {
+
+    position: absolute;
+    font-size: 16px;
+    color: grey;
+    top: 45%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: top 0.3s, font-size 0.3s, color 0.3s, transform 0.3s cubic-bezier(0.5, 0.01, 0, 1.07);  /*  cubic bezier used for smooth transition  */
+}
+
+/* footers */
+
+.footed{
+    top: 155px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: show;
+
+    height: 170px;
+    background-color: #f4f0ed;
+    border-top: 1px solid #969696;
+    width: 1500px;
+    right: 140px;
+    margin: 0 auto;
+    padding: 0; 
+}
+
+.footedsecond {
+    position: relative;
+    display: show;
+    top: 27px;
+}
+
+.footedpc {
+    height: 120px;
+    width: 1080px;
+    display: show;
+}
+
+/* Mobile footer */
+
+.footedmbdiv{
+    top: 190px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    height: 350px;
+    background-color: #f4f0ed;
+    border-top: 1px solid #969696;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0; 
+    display: none;
+}
+
+
+.footedm {
+    height: 320px;
+    width: 452px;
+    display: none;
+}
